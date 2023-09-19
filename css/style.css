@@ -6,7 +6,10 @@
   --clr-hvr: #f7e1c6;
   --box-menu: #fff9b0;
 }
-
+html {
+  scroll-behavior: smooth;
+  animation-duration: 1s;
+}
 * {
   margin: 0;
   padding: 0;
@@ -176,7 +179,6 @@ body {
 }
 
 .menu .row {
-  display: flex;
   flex: wrap;
   margin-top: 5rem;
   justify-content: center;
@@ -245,19 +247,29 @@ body {
   }
 
   .about .cont-about {
-    margin-left: 6rem;
+    text-align: center;
   }
 
   .about .cont-p p {
-    align-items: center;
-    text-align: justify;
-    margin: 15px 5px;
+    align-items: baseline;
+    text-align: center;
+    margin: 15px 5px 15px 1.9em;
     width: 80%;
   }
 
-  .about .cont-about h2 {
-    display: flex;
-    justify-content: center;
+  .menu p {
+    font-size: 1.3rem;
+  }
+
+  .row .menu-card .menu-card-img {
+    width: 50%;
+  }
+  .menu .row .menu-card .menu-card-title {
+    font-size: 1.5rem;
+  }
+  .menu .row .menu-card .menu-card-price {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
   }
 }
 
@@ -277,5 +289,11 @@ body {
   .navbar .navbar-nav a {
     position: relative;
     left: 50px;
+  }
+}
+
+@media (min-width: 768px) {
+  .menu .row {
+    display: flex;
   }
 }
